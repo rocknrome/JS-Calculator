@@ -82,3 +82,23 @@ const handleDecimalButtonClick = () => {
 
 //5. EVENT LISTENERS
 //Attaching event listeners to numbers, operations buttons, equals and reset. 
+numberButtons.forEach((button) => {
+    button.addEventListener('click', () =>
+    handleNumberButtonClick(button.textContent));
+}); //attaching click event listeners to operations buttons
+
+
+operationButtons.forEach((button) => {
+    button.addEventListener('click', () =>
+    handleOperationButtonClick(button.textContent));
+}); //attaching click event listeners to operations buttons
+
+
+equalButton.addEventListener('click', handleEqualsButtonClick);
+//attached click event listener to Equals button
+
+resetButton.addEventListener('click', handleResetButtonClick);
+//attached click event listener to Reset Button
+
+decimalButton.addEventListener('click', handleDecimalButtonClick);
+//Attached decimal point click handler
